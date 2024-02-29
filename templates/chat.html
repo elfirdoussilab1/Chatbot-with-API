@@ -50,14 +50,16 @@
 		<script>
 			$(document).ready(function(){
 				$("#messageArea").on("submit", function(event){
-					const date = Date();
+					const date = new Date();
 					const hour = date.getHours();
 					const minute = date.getMinutes();
 					const str_time = hour + ":" + minutes + ":";
 					var rawText = $("#text").val();
 
 					var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">'+ str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" class="rounded-circle user_img_msg"></div></div>';
-					$("#messageFormeight"),append(userHtml);
+
+					$("#text").val("");
+					$("#messageFormeight").append(userHtml);
 
 					$.ajax({
 						data : {

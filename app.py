@@ -11,7 +11,8 @@ def index():
 @app.route("/get", methods = ["GET", "POST"])
 def chat():
     msg = request.form["msg"]
-    return get_chat_response(msg)
+    input = msg
+    return get_chat_response(input)
 
 def get_chat_response(text):
     # https://huggingface.co/google/gemma-7b
