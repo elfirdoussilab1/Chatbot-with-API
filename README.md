@@ -1,5 +1,5 @@
 # Chatbot-with-API
-![Binaryhood](Logo/BinaryhoodLogo.png)
+![Binaryhood](Logo/api.png)
 Using this code repository, you can interact with your LLMs locally using a graphical interface. All you need is to have Ollama installed on you laptop and some models on it. Enjoy! 
 
 ## Installation & Setup
@@ -53,5 +53,6 @@ To start chatting with your model, run in your notebook:
 ```
 python3 app.py
 ```
+Then you can access the chat API in the local link: [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 # Enjoy chatting!
