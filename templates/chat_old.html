@@ -130,11 +130,6 @@
 							$(".typing-indicator").fadeOut();
 
 							let responseText = data.response;
-                            // Convert Markdown-style code blocks to formatted HTML
-							responseText = responseText.replace(/```(\w+)?\n([\s\S]+?)```/g, function(match, lang, code) {
-								lang = lang || "plaintext"; // Default to plaintext if no language is specified
-								return `<pre><code class="language-${lang}">${code.trim()}</code></pre>`;
-							});
 							var botHtml = `
 								<div class="d-flex justify-content-start mb-4">
 									<div class="msg_cotainer">${responseText}
@@ -142,10 +137,10 @@
 									</div>
 								</div>`;
 							$("#messageFormeight").append($.parseHTML(botHtml));
-                            Prism.highlightAll();
+							Prism.highlightAll();
+
 							// Scroll to the bottom of the chat
 							$("#messageFormeight").scrollTop($("#messageFormeight")[0].scrollHeight);
-                            
 						},
 						error: function() {
 							// Hide the typing indicator on error

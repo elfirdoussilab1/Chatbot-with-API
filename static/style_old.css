@@ -11,8 +11,8 @@ body, html {
 }
 
 .chat {
-    height: 85vh; 
-    width: 500vw;
+    height: 85vh; /* Use 80% of viewport height */
+    width: 500vw; /* Use 90% of viewport width */
     display: flex;
     flex-direction: column;
     overflow: hidden; /* Ensure the whole chat area doesn't overflow */
