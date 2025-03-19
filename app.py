@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModelForSeq2SeqLM
-import torch
 import subprocess
 from ollama import chat
 from ollama import ChatResponse
